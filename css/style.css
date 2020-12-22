@@ -1,0 +1,114 @@
+html,body{
+    overflow-x: hidden;
+}
+body{
+    font-family: 'Varela Round', sans-serif;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none;
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none; 
+}
+.container{
+    width: 100%;
+    padding: 0!important;
+}
+h1{
+    background: #003476;
+    color: #fff;
+    line-height: 60px;
+    height: 60px;
+    padding: 0;
+    margin: 0;
+    font-size: 1.4em;
+}
+p{
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+#black.black{
+    color:rgb(28, 36, 136);
+}
+#black{
+  color:black;  
+} 
+.red{
+    color: red;
+}
+.white{
+    color: #ffffff;
+    transition: all 0.5s;
+}
+
+
+/*---------------table------------------*/
+table { 
+	width: 750px; 
+	border-collapse: collapse; 
+	margin:0 auto;
+    }
+    #thead > tr > th:nth-child(1){
+        pointer-events: none;
+    }    
+th {
+    background-color: #00AF54!important;
+    font-weight: bold;
+    transition: all 0.5s;
+    border: 1px solid #212529!important; 
+ }
+ th, #thead > tr{
+    border-top: none!important;
+ }
+ #thead > tr > th > span{
+     font-size: 20px;
+     margin-left: 5px;
+     font-weight: 600;
+ }
+td, th { 
+	padding: 10px; 
+	border: 1px solid #ccc;  
+    font-size: 18px;
+    text-align: center;
+    }
+    
+/* 
+Max width before this PARTICULAR table gets nasty
+This query will take effect for any screen smaller than 760px
+and also iPads specifically.
+*/
+@media 
+only screen and (max-width: 760px),
+(min-device-width: 768px) and (max-device-width: 1024px)  {
+	table { 
+	  	width: 100%; 
+	}
+	table, thead, tbody, th, td, tr { 
+        display: block; 
+        
+	}
+
+	tr { border: 1px solid #ccc; }
+	td { 
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+		padding-left: 50%; 
+	}
+	td:before { 
+		position: absolute;
+		top: 6px;
+		left: 6px;
+		width: 45%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+		content: attr(data-column);
+		color: #000;
+		font-weight: bold;
+	}
+
+}
+
